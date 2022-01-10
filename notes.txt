@@ -1,0 +1,111 @@
+
+npm init
+npm i http-server
+npm i http-server --dev-save
+
+npm install http-server -g
+
+http-server ./dist
+
+ng serve --open
+sudo ng build --prod
+ng generate component installation
+npm install --save-dev @angular-devkit/build-angular
+
+=============================================================
+npm install primeng --save
+
+npm install primeicons --save
+
+and make sure your pack-lock.json has this
+
+"dependencies": {
+  //...
+  "primeng": "^7.0.0",
+  "primeicons": "^1.0.0"
+},
+import {TooltipModule} from 'primeng/tooltip';
+
+
+=============================================================
+
+    <!-- Bootstrap CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!--Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- PrimeNG style dependencies -->
+<!--     <link rel="stylesheet" href="https://unpkg.com/primeng@5.2.3/resources/themes/omega/theme.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeng@5.2.3/resources/primeng.min.css" />
+    <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet"> -->
+
+=============================================================
+
+
+*************************************************************************************************************************************
+@Component is a decorator function that specifies the Angular metadata for the component.
+The CLI generated three metadata properties:
+
+selector— the component's CSS element selector
+templateUrl— the location of the component's template file.
+styleUrls— the location of the component's private CSS styles
+import { Component } from '@angular/core';
+
+*************************************************************************************************************************************
+<p>{{ message }}</p>
+
+@Component ({
+  selector: 'hello-world-interpolation',
+  templateUrl: './hello-world-interpolation.component.html'
+})
+export class HelloWorldInterpolationComponent {
+    message = 'Hello, World!';
+}
+
+*************************************************************************************************************************************
+Angular also supports property bindings, to help you set values for properties and attributes of HTML elements and pass values to your application's presentation logic
+
+<p [id]="sayHelloId" [style.color]="fontColor">You can set my color in the component!</p>
+*************************************************************************************************************************************
+The ngRoute module provides routing, deeplinking services and directives for angular apps.
+
+We need to include angular-route script after the main angular script.
+*************************************************************************************************************************************
+
+Then we need to specify the place where HTML of each page will be placed in our layout. There is a ng-view directive for that.
+
+ng-view is an Angular directive that will include the template of the current route (for example, /blog or /about) in the main layout file.
+
+In plain words, it takes the file we specified for current route and injects it into the layout in the place of ng-view directive.
+
+*************************************************************************************************************************************
+Angular needs to know how the pieces of your application fit together and what other files and libraries the app requires. This information is called metadata
+
+
+*************************************************************************************************************************************
+You used *ngFor to display a list.
+You used *ngIf to conditionally include or exclude a block of HTML.
+You can toggle a CSS style class with a class binding.
+
+file:///home/manu/Documents/final_file_structure.jpg
+\
+
+
+
+
+
+
+
+============================================
+ heroku_api_key: ['', [Validators.required, Validators.pattern(".*\\S.*[a-zA-z0-9 ]")]]
+Validators.pattern(/^\S$|^\S[\s\S]*\S$/)
+
+
+=================================================
+Event Emitter:
+
+https://medium.com/weekly-webtips/how-to-pass-data-between-components-in-angular-8-c6bfc0358cd2
+
+

@@ -1,0 +1,95 @@
+# DataBinding
+	Binding is the process which forms the connection between the application UI and the data which comes from the business logic. In Angular, it can be called the automatic synchronization of the data and the view
+
+##############################
+One way binding
+##############################
+	In one way binding data flows from one direction. Either from view to component or from component to view	
+From Component to View
+
+i)From Component to View
+
+***********Interpolation**************
+	The angular evaluates the expressions into a string and replaces it in the original string and updates the view. You can use interpolation wherever you use a string literal in the view
+	{{ templateExpression }}
+		<p>Welcome,  {{Name}}</p>
+************PROPERTY BINDING**********
+	Property binding means we pass the data from the component class and set the value to the given element in the view. 
+This is one way that data is passed from the component to the view
+	With property binding, we bind properties of DOM elements to fields/properties in our component
+
+we can set the properties such as class, href, src, textContent, etc using property binding 
+	a.Property binding using Brackets Around the Element Property
+		The square brackets set the value from the component to the HTML element/DOM properties
+		[binding-target]=”binding-source”
+			<button [disabled]="isDisabled">I am disabled</button>
+	b.Property binding Using "bind-" Prefix Before Element Property
+We can use interpolation unless the value we are using from the component is a string, otherwise, we must use the other two methods in order to do the property binding.
+		<button bind-disabled="isDisabled">I am disabled</button>
+
+************Class Binding************
+	Angular Class Binding is basically used to add or remove classes to and from the HTML elements. It is also possible in Angular to add CSS Classes conditionally to an element, which will create the dynamically styled elements and this is possible because of Angular Class Binding.
+	-> Class binding
+	-> Normal class + Class binding
+		<button class='colorClass' [class]='classesToApply'>Click me</button>
+	-> Adding or removing a single class
+	-> Class Binding using “!” symbol
+	-> By using Angular Class Binding, Remove an existing class that is already applied
+	-> Add or Remove multiple classes using ngClass directive
+	https://dotnettutorials.net/lesson/angular-class-binding/
+************Style Binding************
+	The Angular Style Binging is basically used to set the style in HTML elements. You can use both inline as well as Style Binding to set the style in the element in Angular Applications.
+	-> [style.font-weight]="IsBold ? 'bold' : 'normal'
+	-> [style.fontWeight]="IsBold ? 'bold' : 'normal'
+	-> [style.font-size.px]="FontSize"
+	-> [ngStyle]="AddCSSStyles()
+
+	https://dotnettutorials.net/lesson/angular-style-binding/
+	
+************Attribute Binding************
+	Attribute binding is also type of Angular one-way data binding which is unidirectional.
+	Using attribute binding you can bind data from the component to the view.
+	-> attr.colspan={{ColumnSpan}}
+	-> [attr.colspan]="colSpanValue"
+
+
+ii)From View to Component
+ ******EVENT BINDING******** 
+
+	All the user interactions with the application happen through clicks, double clicks, or hovering or maybe some key actions such as keypress, key up, or key down. Generally, there will be the case where we will be calling some logic on these actions - that’s when event binding helps us
+	With event binding, we bind events of DOM elements (such as clicks) to methods in our component.	
+	Event binding is the one-way data binding which sends the value from the view to the component, 
+which is in contrast to the property binding where we used to send the data from component to the view 
+	a)we can call the method in component class
+		<element (event)="method()"></element>
+	b)we can pass the value of some control from the UI to the method in the component
+		
+	c)Use the prefix on- before the event of the element.
+		Append on- before the event and assign the method from the component which will be called.
+
+		<button on-click="SendData(txtUserName.value,txtpassword.value,txtEmail.value)">Click to send Data</button>
+
+		Note: #txtUsername, #txtpassword are the template reference variables which can be used with Angular to take in values.
+##############################
+Two-Way Binding
+##############################
+	Two-way binding is the combination of property binding [] and event binding (), so two-way binding can be used by combinging the two, such as: ([……]). This allows for a continuous sync between the presentation and the View layer of the application.
+	Two way data binding means that changes made to our model in the component are propagated to the view and that any changes made in the view are immediately updated in the underlying component data
+	Two-way binding is useful in data entry forms
+	Whenever a user makes changes to a form field, we would like to update our model. Similarly, when we update the model with new data, we would like to update the view as well
+	[()] is now known as Banana in a box syntax
+	-> Using the input event of the input control
+		
+	-> we can also implement the two-way data binding in Angular Application using the ngModel directive.
+`		<input [(ngModel)] = ‘data’>
+	If you want to use the ngModel directive, then in your root module that is AppModule, you will have to import the FormsModule first
+		
+	https://dotnettutorials.net/lesson/angular-two-way-data-binding/
+
+================================================================================================================================
+FYR:
+https://dzone.com/articles/bindings-in-angular
+https://dotnettutorials.net/lesson/angular-class-binding/
+https://www.tektutorialshub.com/angular/angular-data-binding/
+https://programmingwithmosh.com/angular/angular-4-tutorial/
+================================================================================================================================

@@ -1,0 +1,9 @@
+
+
+
+
+FYR:
+https://dev.to/deerawan/3-different-ways-to-use-input-decorator-4b3c
+
+https://dzone.com/articles/understanding-output-and-eventemitter-in-angular
+https://www.c-sharpcorner.com/article/input-and-output-decorator-in-angular/
